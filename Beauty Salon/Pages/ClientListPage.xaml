@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Beauty_Salon.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Список клиентов" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontSize="20">
+      Title="Список клиентов" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontSize="20" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,20 +15,37 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="1" x:Name="DGclient" IsReadOnly="True" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" x:Name="DGclient" IsReadOnly="True" AutoGenerateColumns="False" GridLinesVisibility="Horizontal">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding Client.LastName}"/>
-                <DataGridTextColumn Header="Имя" Binding="{Binding Client.FirstName}"/>
-                <DataGridTextColumn Header="Отчество" Binding="{Binding Client.Patronymic}"/>
-                <DataGridTextColumn Header="Услуги" Binding="{Binding Services.Name}"/>
-                <DataGridTextColumn Header="Сумма" Binding="{Binding Price}"/>
-                <DataGridTemplateColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="*"/>
+
+                <DataGridTemplateColumn Header="Фото" Width="*" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="/resources/done.png"/>
+                            <Image MaxHeight="70" Source="{Binding Image}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image MaxHeight="30" Source="/resources/edit.png" x:Name="ImgEdit" MouseLeftButtonDown="ImgEdit_MouseLeftButtonDown"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image MaxHeight="30" Source="/resources/delete.png" x:Name="ImgDelete" MouseLeftButtonDown="ImgDelete_MouseLeftButtonDown"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
             </DataGrid.Columns>
         </DataGrid>
 

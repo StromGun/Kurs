@@ -18,7 +18,7 @@ namespace Beauty_Salon.Entities
         public int OrderID { get; set; }
         public int ServiceID { get; set; }
     
-        public virtual Order Order { get; set; }
         public virtual Service Service { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

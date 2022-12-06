@@ -9,6 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.3*" MaxHeight="90"/>
+            <RowDefinition Height="0.2*" MaxHeight="40"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="0.2*" MaxHeight="50"/>
         </Grid.RowDefinitions>
@@ -26,9 +27,15 @@
             </Button>
         </Grid>
 
-        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="FrameMain" Background="{StaticResource ColorDefault}"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#FFF9D0DF">
+            <Button Content="Услуги" x:Name="BtnServices" Click="BtnServices_Click" Style="{StaticResource miniBtn}"/>
+            <Button Content="Клиенты" x:Name="BtnClients" Click="BtnClients_Click" Style="{StaticResource miniBtn}"/>
+            <Button Content="Заказы" x:Name="BtnOrders" Click="BtnOrders_Click" Style="{StaticResource miniBtn}"/>
+        </StackPanel>
 
-        <Grid Grid.Row="2" Background="{StaticResource ColorCommon}"/>
+        <Frame Grid.Row="2" NavigationUIVisibility="Hidden" Name="FrameMain" Background="{StaticResource ColorDefault}"/>
+
+        <Grid Grid.Row="3" Background="{StaticResource ColorCommon}"/>
 
     </Grid>
 </Window>

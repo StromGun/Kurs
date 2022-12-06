@@ -24,9 +24,25 @@ namespace Beauty_Salon.Pages
     {
         private Entities.Client _currentClient = null;
         private byte[] _mainImageData;
+
+
         public AddEditClient()
         {
             InitializeComponent();
+        }
+
+        public AddEditClient(Entities.Client client)
+        {
+            InitializeComponent();
+            _currentClient = client;
+            Title = "Редактировать данные о клиенте";
+            TboxLname.Text = _currentClient.LastName;
+            TboxFname.Text = _currentClient.FirstName;
+            TboxPatronymic.Text = _currentClient.Patronymic;
+            TboxAge.Text = _currentClient.Age.ToString();
+
+            if (_currentClient.Image != null)
+                ClientImage.Source = (ImageSource) new ImageSourceConverter().ConvertFrom(_currentClient.Image);
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)

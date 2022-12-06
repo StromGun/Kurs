@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\
 Beauty_Salon
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\source\repos\Kurs\Beauty Salon\App.xaml
-3-902402614
-2-1436223632
-15-795397071
-18359056551
-MainWindow.xaml;Pages\AddEditClient.xaml;Pages\ClientListPage.xaml;
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\App.xaml
+4-704701621
+2-1189279499
+17488690000
+181787088141
+MainWindow.xaml;Pages\AddEditClient.xaml;Pages\ClientListPage.xaml;Pages\ServiceListPage.xaml;
 
 False
 

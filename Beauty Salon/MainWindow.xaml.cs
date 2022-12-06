@@ -31,5 +31,20 @@ namespace Beauty_Salon
             if (FrameMain.CanGoBack)
                 FrameMain.GoBack();
         }
+
+        private void BtnServices_Click(object sender, RoutedEventArgs e)
+        {
+            FrameMain.Navigate(new Pages.ServiceListPage());
+        }
+
+        private void BtnClients_Click(object sender, RoutedEventArgs e)
+        {
+            FrameMain.Navigate(new Pages.ClientListPage());
+        }
+
+        private void BtnOrders_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
