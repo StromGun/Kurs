@@ -19,9 +19,9 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="OrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ClientID" Type="Int32" Nullable="false" />
-    <Property Name="ServiceID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Client" Relationship="Self.FK_Order_Client" FromRole="Order" ToRole="Client" />
     <NavigationProperty Name="OrderServices" Relationship="Self.FK_OrderService_Order" FromRole="Order" ToRole="OrderService" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="OrderService">
     <Key>

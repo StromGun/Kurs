@@ -15,13 +15,20 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="1">
+        <DataGrid Grid.Row="1" x:Name="DGclient" IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия"/>
-                <DataGridTextColumn Header="Имя"/>
-                <DataGridTextColumn Header="Отчество"/>
-                <DataGridTextColumn Header="Услуги"/>
-                <DataGridTextColumn Header="Сумма"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Client.LastName}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Client.FirstName}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Client.Patronymic}"/>
+                <DataGridTextColumn Header="Услуги" Binding="{Binding Services.Name}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Price}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="/resources/done.png"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

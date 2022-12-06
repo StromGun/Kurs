@@ -16,10 +16,10 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="Model.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="OrderName" ColumnName="OrderName" />
           <ScalarProperty Name="ClientID" ColumnName="ClientID" />
-          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -23,6 +23,7 @@ namespace Beauty_Salon.Pages
         public ClientListPage()
         {
             InitializeComponent();
+            DGclient.ItemsSource = App.Context.Orders.ToList();
         }
 
 

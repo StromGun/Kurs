@@ -18,7 +18,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OrderName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="ClientID" Type="int" Nullable="false" />
-    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderService">
     <Key>
