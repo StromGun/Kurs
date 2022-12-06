@@ -1,0 +1,37 @@
+C:\Users\Admin\source\repos\Beauty Salon\bin\Debug\Beauty Salon.exe.config
+C:\Users\Admin\source\repos\Beauty Salon\bin\Debug\Beauty Salon.exe
+C:\Users\Admin\source\repos\Beauty Salon\bin\Debug\Beauty Salon.pdb
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\App.g.cs
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon_MarkupCompile.cache
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon_MarkupCompile.lref
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\App.baml
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\MainWindow.baml
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon.g.resources
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty_Salon.Properties.Resources.resources
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon.exe
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Beauty Salon.pdb
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Pages\ClientListPage.g.cs
+C:\Users\Admin\source\repos\Beauty Salon\obj\Debug\Pages\ClientListPage.baml
+C:\Users\StormGun\Desktop\dada\Beauty Salon\bin\Debug\Beauty Salon.exe.config
+C:\Users\StormGun\Desktop\dada\Beauty Salon\bin\Debug\Beauty Salon.exe
+C:\Users\StormGun\Desktop\dada\Beauty Salon\bin\Debug\Beauty Salon.pdb
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.csproj.AssemblyReference.cache
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.csproj.SuggestedBindingRedirects.cache
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\MainWindow.g.cs
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Pages\ClientListPage.g.cs
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\App.g.cs
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon_MarkupCompile.cache
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon_MarkupCompile.lref
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\App.baml
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\MainWindow.baml
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Pages\ClientListPage.baml
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.g.resources
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty_Salon.Properties.Resources.resources
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.csproj.GenerateResource.cache
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.csproj.CoreCompileInputs.cache
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.exe
+C:\Users\StormGun\Desktop\dada\Beauty Salon\obj\Debug\Beauty Salon.pdb
