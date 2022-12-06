@@ -1,0 +1,36 @@
+﻿<Application x:Class="Gameworld.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Gameworld"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Background" Value="#A2D2FF"/>
+            <Setter Property="Foreground" Value="#ffff"/>
+        </Style>
+
+
+
+        <Brush x:Key="ColorDefault">#ffff</Brush>
+        <Brush x:Key="ColorAccent">#BDE0FE</Brush>
+        <Brush x:Key="ColorCommon">#FFC8DD</Brush>
+    </Application.Resources>
+</Application>

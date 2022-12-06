@@ -1,0 +1,33 @@
+﻿<Window x:Class="Gameworld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gameworld"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*" MaxHeight="90"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.2*" MaxHeight="50"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Background="{StaticResource ColorCommon}">
+            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0"/>
+            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <Button x:Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Resources/undo.png"/>
+                    <TextBlock Text="Back" Margin="5 0"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="FrameMain" Background="{StaticResource ColorDefault}"/>
+
+        <Grid Grid.Row="2" Background="{StaticResource ColorCommon}"/>
+
+    </Grid>
+</Window>
