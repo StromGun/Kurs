@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Beauty Salon",
+    "\\Beauty Salon\\Pages"
   ],
-  "SelectedNode": "\\Beauty Salon.sln",
+  "SelectedNode": "\\Beauty Salon\\Pages\\ClientListPage.xaml",
   "PreviewInSolutionExplorer": false
 }
