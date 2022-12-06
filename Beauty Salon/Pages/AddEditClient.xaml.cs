@@ -16,20 +16,18 @@ using System.Windows.Shapes;
 namespace Beauty_Salon.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ClientListPage.xaml
+    /// Логика взаимодействия для AddEditClient.xaml
     /// </summary>
-    public partial class ClientListPage : Page
+    public partial class AddEditClient : Page
     {
-        public ClientListPage()
+        public AddEditClient()
         {
             InitializeComponent();
         }
 
-
-
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.AddEditClient());
+            //var service = new Entities.
         }
     }
 }

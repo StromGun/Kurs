@@ -15,12 +15,13 @@
         
         
         <Grid Background="{StaticResource ColorCommon}">
-            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0" Width="70"/>
-            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0"/>
+            
+            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Width="200"/>
             <Button x:Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Resources/undo.png"/>
-                    <TextBlock Text="Back" Margin="5 0"/>
+                    <TextBlock Text="Назад" Margin="5 0"/>
                 </StackPanel>
             </Button>
         </Grid>

@@ -4,12 +4,24 @@
              xmlns:local="clr-namespace:Beauty_Salon"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
-        
-        
-        
-        <Style TargetType="Button">
+
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TBmain">
             <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="25"/>
+        </Style>
+
+
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="Margin" Value="10"/>
             <Setter Property="FontSize" Value="20"/>
