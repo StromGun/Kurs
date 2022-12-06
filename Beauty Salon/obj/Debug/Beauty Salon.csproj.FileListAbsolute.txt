@@ -54,3 +54,11 @@ C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.Gene
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.exe
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.pdb
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.dll
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.xml
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon_Content.g.cs
+C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.CopyComplete

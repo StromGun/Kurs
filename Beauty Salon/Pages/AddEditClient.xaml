@@ -48,10 +48,10 @@
                 <TextBlock Text="Картинка" Style="{StaticResource TBmain}"/>
 
                     <Border BorderBrush="Black" BorderThickness="1" Width="150" Height="135">
-                    <Image/>
+                    <Image x:Name="ClientImage"/>
                 </Border>
                 
-                <Button x:Name="BtnSelectImg">
+                <Button x:Name="BtnSelectImg" Click="BtnSelectImg_Click">
                     
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/resources/upload.png"/>

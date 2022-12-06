@@ -13,5 +13,6 @@ namespace Beauty_Salon
     /// </summary>
     public partial class App : Application
     {
+        public static Entities.Entities Context { get; } = new Entities.Entities();
     }
 }
