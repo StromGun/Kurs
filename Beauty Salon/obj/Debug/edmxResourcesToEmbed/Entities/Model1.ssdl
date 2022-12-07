@@ -21,7 +21,8 @@
   </EntityType>
   <EntityType Name="OrderService">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ServiceID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OrderID" Type="int" Nullable="false" />

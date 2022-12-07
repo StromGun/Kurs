@@ -106,8 +106,8 @@ namespace Beauty_Salon.Pages
                 errorBuilder.AppendLine("Имя обязательня для заполнения");
 
             short age = 0;
-            if (short.TryParse(TboxAge.Text, out age) == false || age <= 0)
-                errorBuilder.AppendLine("Возраст должен быть положительным числом");
+            if (short.TryParse(TboxAge.Text, out age) == false || age <= 0 || age >=200)
+                errorBuilder.AppendLine("Возраст должен быть положительным числом и не больше 200");
 
             if (errorBuilder.Length > 0)
                 errorBuilder.Insert(0, "Устраните следующие ошибки:\n");

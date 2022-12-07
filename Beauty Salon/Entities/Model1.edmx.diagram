@@ -5,14 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1bf0fdd034c347ae974dd0315eff5922" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.OrderService" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="9.75" PointY="4.375" IsExpanded="true" />
-        <AssociationConnector Association="Model.FK_OrderService_Services" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="0.875" />
         <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="3" PointY="1.125" />
         <AssociationConnector Association="Model.FK_Order_Client" />
+        <EntityTypeShape EntityType="Model.OrderService" Width="1.5" PointX="5.5" PointY="2" />
         <AssociationConnector Association="Model.FK_OrderService_Order" />
+        <AssociationConnector Association="Model.FK_OrderService_Services" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

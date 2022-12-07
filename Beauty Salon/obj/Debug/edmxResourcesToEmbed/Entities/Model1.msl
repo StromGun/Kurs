@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
-    <EntitySetMapping Name="OrderServices">
-      <EntityTypeMapping TypeName="Model.OrderService">
-        <MappingFragment StoreEntitySet="OrderService">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Services">
       <EntityTypeMapping TypeName="Model.Service">
         <MappingFragment StoreEntitySet="Services">
@@ -47,6 +38,15 @@
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="ClientID" ColumnName="ClientID" />
           <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderServices">
+      <EntityTypeMapping TypeName="Model.OrderService">
+        <MappingFragment StoreEntitySet="OrderService">
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

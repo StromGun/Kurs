@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         
         
-        <Grid Background="{StaticResource ColorCommon}">
+        <Grid Background="{StaticResource ColorCommon}" Margin="0">
             <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0 0 10"/>
 
             <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Width="auto"/>
@@ -27,7 +27,7 @@
             </Button>
         </Grid>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#FFF9D0DF">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#FFF9D0DF" Margin="0">
             <Button Content="Услуги" x:Name="BtnServices" Click="BtnServices_Click" Style="{StaticResource miniBtn}"/>
             <Button Content="Клиенты" x:Name="BtnClients" Click="BtnClients_Click" Style="{StaticResource miniBtn}"/>
             <Button Content="Заказы" x:Name="BtnOrders" Click="BtnOrders_Click" Style="{StaticResource miniBtn}"/>

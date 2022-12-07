@@ -44,7 +44,7 @@ namespace Beauty_Salon
 
         private void BtnOrders_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameMain.Navigate(new Pages.OrderListPage());
         }
     }
 }
