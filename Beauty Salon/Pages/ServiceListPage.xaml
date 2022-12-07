@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Beauty_Salon.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ServiceListPage">
+      Title="Список услуг" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontSize="20" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,10 +15,10 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="1" x:Name="DGservice" IsReadOnly="True" AutoGenerateColumns="False" GridLinesVisibility="Horizontal">
+        <DataGrid Grid.Row="1" x:Name="DGservice" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="*"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price, StringFormat=N2}" Width="*"/>
 
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>

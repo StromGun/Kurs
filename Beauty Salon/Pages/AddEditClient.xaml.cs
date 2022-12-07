@@ -29,11 +29,13 @@ namespace Beauty_Salon.Pages
         public AddEditClient()
         {
             InitializeComponent();
+            DataContext = new Entities.Client();
         }
 
         public AddEditClient(Entities.Client client)
         {
             InitializeComponent();
+            DataContext = client;
             _currentClient = client;
             Title = "Редактировать данные о клиенте";
             TboxLname.Text = _currentClient.LastName;
@@ -47,30 +49,39 @@ namespace Beauty_Salon.Pages
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (_currentClient == null)
+            var errorMessage = ErrorCheck();
+
+            if (errorMessage.Length > 0 )
             {
-                var client = new Entities.Client
-                {
-                    LastName = TboxLname.Text,
-                    FirstName = TboxFname.Text,
-                    Patronymic = TboxPatronymic.Text,
-                    Age = short.Parse(TboxAge.Text),
-                    Image = _mainImageData
-                };
-            App.Context.Clients.Add(client);
-            App.Context.SaveChanges();
+                MessageBox.Show(errorMessage,"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                _currentClient.LastName = TboxLname.Text;
-                _currentClient.FirstName = TboxFname.Text;
-                _currentClient.Patronymic = TboxPatronymic.Text;
-                _currentClient.Age = short.Parse(TboxAge.Text);
-                if (_mainImageData != null)
-                    _currentClient.Image = _mainImageData;
+                if (_currentClient == null)
+                {
+                    var client = new Entities.Client
+                    {
+                        LastName = TboxLname.Text,
+                        FirstName = TboxFname.Text,
+                        Patronymic = TboxPatronymic.Text,
+                        Age = short.Parse(TboxAge.Text),
+                        Image = _mainImageData
+                    };
+                App.Context.Clients.Add(client);
                 App.Context.SaveChanges();
+                }
+                else
+                {
+                    _currentClient.LastName = TboxLname.Text;
+                    _currentClient.FirstName = TboxFname.Text;
+                    _currentClient.Patronymic = TboxPatronymic.Text;
+                    _currentClient.Age = short.Parse(TboxAge.Text);
+                    if (_mainImageData != null)
+                        _currentClient.Image = _mainImageData;
+                    App.Context.SaveChanges();
+                }
+                NavigationService.GoBack();
             }
-            NavigationService.GoBack();
 
         }
 
@@ -83,6 +94,25 @@ namespace Beauty_Salon.Pages
                 _mainImageData = File.ReadAllBytes(ofd.FileName);
                 ClientImage.Source = (ImageSource)new ImageSourceConverter().ConvertFrom(_mainImageData);
                     }
+        }
+
+        private string ErrorCheck()
+        {
+            var errorBuilder = new StringBuilder();
+
+            if (string.IsNullOrWhiteSpace(TboxLname.Text))
+                errorBuilder.AppendLine("Фамилия обязательня для заполнения");
+            if (string.IsNullOrWhiteSpace(TboxFname.Text))
+                errorBuilder.AppendLine("Имя обязательня для заполнения");
+
+            short age = 0;
+            if (short.TryParse(TboxAge.Text, out age) == false || age <= 0)
+                errorBuilder.AppendLine("Возраст должен быть положительным числом");
+
+            if (errorBuilder.Length > 0)
+                errorBuilder.Insert(0, "Устраните следующие ошибки:\n");
+
+            return errorBuilder.ToString();
         }
     }
 }

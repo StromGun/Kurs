@@ -101,6 +101,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddEditServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ClientListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +127,9 @@
     </Compile>
     <Compile Include="Pages\AddEditClient.xaml.cs">
       <DependentUpon>AddEditClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditServicePage.xaml.cs">
+      <DependentUpon>AddEditServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ClientListPage.xaml.cs">
       <DependentUpon>ClientListPage.xaml</DependentUpon>

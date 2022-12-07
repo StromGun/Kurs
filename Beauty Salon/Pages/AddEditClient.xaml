@@ -30,7 +30,15 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Возраст" Style="{StaticResource TBmain}"/>
-                    <TextBox x:Name="TboxAge"/>
+                    <TextBox x:Name="TboxAge">
+                        <TextBox.Text>
+                            <Binding Path="Age" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <ExceptionValidationRule/>
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                 </StackPanel>
 
                 <Button x:Name="BtnSave" HorizontalAlignment="Right" Margin="5" Click="BtnSave_Click">

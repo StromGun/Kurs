@@ -26,6 +26,10 @@ namespace Beauty_Salon.Pages
             UpdateServices();
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateServices();
+        }
 
         private void UpdateServices()
         {
@@ -37,7 +41,8 @@ namespace Beauty_Salon.Pages
         private void ImgEdit_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var currentService = (sender as Image).DataContext as Entities.Service;
-            //NavigationService.Navigate(new Pages.AddEditClient(currentService));
+            NavigationService.Navigate(new Pages.AddEditServicePage(currentService));
+            UpdateServices();
         }
 
         private void ImgDelete_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -50,11 +55,15 @@ namespace Beauty_Salon.Pages
                 App.Context.Services.Remove(currentService);
                 App.Context.SaveChanges();
             }
+            UpdateServices();
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Pages.AddEditServicePage());
+            UpdateServices();
         }
+
+       
     }
 }

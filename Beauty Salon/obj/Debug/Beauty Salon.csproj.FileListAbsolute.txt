@@ -92,3 +92,5 @@ C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.exe
 C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.pdb
 C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.g.cs
 C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.baml

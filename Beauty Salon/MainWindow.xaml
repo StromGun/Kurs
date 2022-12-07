@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Beauty_Salon"
         mc:Ignorable="d"
-        Title="Beauty Salon" MinHeight="450" MinWidth="800" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontWeight="Bold" Icon="Resources/logo.png">
+        Title="Beauty Salon" MinHeight="600" MinWidth="800" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontWeight="Bold" Icon="Resources/logo.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.3*" MaxHeight="90"/>
@@ -16,9 +16,9 @@
         
         
         <Grid Background="{StaticResource ColorCommon}">
-            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0"/>
-            
-            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Width="200"/>
+            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0 0 10"/>
+
+            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Width="auto"/>
             <Button x:Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Resources/undo.png"/>
