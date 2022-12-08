@@ -40,7 +40,10 @@
     <Property Name="ClientID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Client" Relationship="BeautySalonModel.FK_Order_Client" FromRole="Order" ToRole="Client" />
     <NavigationProperty Name="OrderServices" Relationship="BeautySalonModel.FK_OrderService_Order" FromRole="Order" ToRole="OrderService" />
+<<<<<<< HEAD
     <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+=======
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
   </EntityType>
   <EntityType Name="OrderService">
     <Key>

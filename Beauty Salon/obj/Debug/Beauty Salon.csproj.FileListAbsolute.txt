@@ -98,6 +98,7 @@ C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.g
 C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.baml
 C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.g.cs
 C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.baml
+<<<<<<< HEAD
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.g.cs
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.g.cs
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.g.cs
@@ -106,3 +107,5 @@ C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.b
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.baml
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.baml
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.baml
+=======
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93

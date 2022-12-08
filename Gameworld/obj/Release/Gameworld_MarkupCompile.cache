@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Admin\Source\Repos\Kurs\Gameworld\obj\Release\
+=======
+C:\Users\StormGun\Source\Repos\Kurs\Gameworld\obj\Release\
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
 Gameworld
 none
 false
 TRACE
+<<<<<<< HEAD
 C:\Users\Admin\Source\Repos\Kurs\Gameworld\App.xaml
 21411788386
 
 61777831010
 13-1505183044
+=======
+C:\Users\StormGun\Source\Repos\Kurs\Gameworld\App.xaml
+2-25591480
+
+61648023466
+13-1310406943
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
 MainWindow.xaml;WorkWindow.xaml;
 
 True

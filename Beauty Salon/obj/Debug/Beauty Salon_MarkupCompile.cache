@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\
+=======
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
 Beauty_Salon
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\App.xaml
 7-1475402380
 2-1436223632
 211362919828
 18-2009969084
+=======
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\App.xaml
+7-1435208631
+2-1189279499
+21-230806143
+181787088141
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
 MainWindow.xaml;Pages\AddEditClient.xaml;Pages\AddEditOrderPage.xaml;Pages\AddEditServicePage.xaml;Pages\ClientListPage.xaml;Pages\OrderListPage.xaml;Pages\ServiceListPage.xaml;
 
 False

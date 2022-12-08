@@ -23,7 +23,6 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ClientID" Type="int" Nullable="false" />
-          <Property Name="Price" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="OrderService">
           <Key>
@@ -152,7 +151,10 @@
           <Property Name="ClientID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Client" Relationship="BeautySalonModel.FK_Order_Client" FromRole="Order" ToRole="Client" />
           <NavigationProperty Name="OrderServices" Relationship="BeautySalonModel.FK_OrderService_Order" FromRole="Order" ToRole="OrderService" />
+<<<<<<< HEAD
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+=======
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
         </EntityType>
         <EntityType Name="OrderService">
           <Key>
@@ -240,7 +242,10 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="BeautySalonModel.Order">
               <MappingFragment StoreEntitySet="Order">
+<<<<<<< HEAD
                 <ScalarProperty Name="Price" ColumnName="Price" />
+=======
+>>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
                 <ScalarProperty Name="ClientID" ColumnName="ClientID" />
                 <ScalarProperty Name="OrderName" ColumnName="OrderName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
