@@ -59,6 +59,7 @@ namespace Beauty_Salon.Pages
                 App.Context.Clients.Remove(currentClient);
                 App.Context.SaveChanges();
             }
+            UpdateClients();
         }
     }
 }

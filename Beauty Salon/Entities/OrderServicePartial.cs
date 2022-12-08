@@ -11,12 +11,12 @@ namespace Beauty_Salon.Entities
 
         public string GetServiceName
         {
-            get => $"{Service.Name}";
+            get => Service.Name;
         }
 
         public string GetServicePrice
         {
-            get => $"{Service.Price}";
+            get => Service.Price.ToString();
         }
     }
 }

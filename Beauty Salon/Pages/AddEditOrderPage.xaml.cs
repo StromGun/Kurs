@@ -67,18 +67,6 @@ namespace Beauty_Salon.Pages
                     App.Context.OrderServices.Add(orderService);
                     App.Context.SaveChanges();
                 }
-                else
-                {
-                    _currentClient.LastName = TboxLname.Text;
-                    _currentClient.FirstName = TboxFname.Text;
-                    _currentClient.Patronymic = TboxPatronymic.Text;
-                    _currentClient.Age = short.Parse(TboxAge.Text);
-
-                    _currentOrder.OrderName = DateTime.Now.ToString() + _currentClient.ID.ToString();
-                    _currentOrderService.OrderID = _currentOrder.ID;
-                    _currentOrderService.ServiceID = int.Parse(LboxService.SelectedValue.ToString());
-                    App.Context.SaveChanges();
-                }
                 NavigationService.GoBack();
             }
         }

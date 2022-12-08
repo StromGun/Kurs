@@ -37,7 +37,9 @@
     <Property Name="Price" Type="money" Nullable="false" />
   </EntityType>
   <Association Name="FK_Order_Client">
-    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Client" Type="Self.Client" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Client">
@@ -63,7 +65,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderService_Services">
-    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Services">
