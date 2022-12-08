@@ -17,11 +17,43 @@
 
         <DataGrid Grid.Row="1" x:Name="DGorders" >
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderName}" Width="*"/>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding Client.LastName}" Width="*"/>
                 <DataGridTextColumn Header="Имя" Binding="{Binding Client.FirstName}" Width="*"/>
-                <DataGridTextColumn Header="Услуги" Binding="{Binding Order.Services.Name}" Width="*"/>
 
-                <DataGridTextColumn Header="Цена" Binding="{Binding OrderServices.Service.Price, StringFormat=N2}" Width="*"/>
+                <DataGridTemplateColumn Header="Услуги" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl DataContext="{Binding OrderServices}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding GetServiceName}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Цены" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl DataContext="{Binding OrderServices}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding GetServicePrice}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
 
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>

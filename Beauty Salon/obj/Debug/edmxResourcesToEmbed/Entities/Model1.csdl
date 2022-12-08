@@ -1,49 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BeautySalonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="BeautySalonEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Clients" EntityType="BeautySalonModel.Client" />
-    <EntitySet Name="Orders" EntityType="BeautySalonModel.Order" />
-    <EntitySet Name="OrderServices" EntityType="BeautySalonModel.OrderService" />
-    <EntitySet Name="Services" EntityType="BeautySalonModel.Service" />
-    <EntitySet Name="sysdiagrams" EntityType="BeautySalonModel.sysdiagram" />
-    <AssociationSet Name="FK_Order_Client" Association="BeautySalonModel.FK_Order_Client">
-      <End Role="Client" EntitySet="Clients" />
-      <End Role="Order" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_OrderService_Order" Association="BeautySalonModel.FK_OrderService_Order">
-      <End Role="Order" EntitySet="Orders" />
-      <End Role="OrderService" EntitySet="OrderServices" />
-    </AssociationSet>
-    <AssociationSet Name="FK_OrderService_Services" Association="BeautySalonModel.FK_OrderService_Services">
-      <End Role="Service" EntitySet="Services" />
-      <End Role="OrderService" EntitySet="OrderServices" />
-    </AssociationSet>
-  </EntityContainer>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Client">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Age" Type="Int16" Nullable="false" />
     <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <NavigationProperty Name="Orders" Relationship="BeautySalonModel.FK_Order_Client" FromRole="Client" ToRole="Order" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Client" FromRole="Client" ToRole="Order" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="OrderName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ClientID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Client" Relationship="BeautySalonModel.FK_Order_Client" FromRole="Order" ToRole="Client" />
-    <NavigationProperty Name="OrderServices" Relationship="BeautySalonModel.FK_OrderService_Order" FromRole="Order" ToRole="OrderService" />
-<<<<<<< HEAD
-    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-=======
->>>>>>> 632cf5ad58bef6ae1ff47531901e22bf6ad9cb93
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_Order_Client" FromRole="Order" ToRole="Client" />
+    <NavigationProperty Name="OrderServices" Relationship="Self.FK_OrderService_Order" FromRole="Order" ToRole="OrderService" />
   </EntityType>
   <EntityType Name="OrderService">
     <Key>
@@ -52,31 +30,21 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="OrderID" Type="Int32" Nullable="false" />
     <Property Name="ServiceID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Order" Relationship="BeautySalonModel.FK_OrderService_Order" FromRole="OrderService" ToRole="Order" />
-    <NavigationProperty Name="Service" Relationship="BeautySalonModel.FK_OrderService_Services" FromRole="OrderService" ToRole="Service" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_OrderService_Order" FromRole="OrderService" ToRole="Order" />
+    <NavigationProperty Name="Service" Relationship="Self.FK_OrderService_Services" FromRole="OrderService" ToRole="Services" />
   </EntityType>
   <EntityType Name="Service">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-    <NavigationProperty Name="OrderServices" Relationship="BeautySalonModel.FK_OrderService_Services" FromRole="Service" ToRole="OrderService" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="OrderServices" Relationship="Self.FK_OrderService_Services" FromRole="Services" ToRole="OrderService" />
   </EntityType>
   <Association Name="FK_Order_Client">
-    <End Type="BeautySalonModel.Client" Role="Client" Multiplicity="1" />
-    <End Type="BeautySalonModel.Order" Role="Order" Multiplicity="*" />
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Client">
         <PropertyRef Name="ID" />
@@ -87,8 +55,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderService_Order">
-    <End Type="BeautySalonModel.Order" Role="Order" Multiplicity="1" />
-    <End Type="BeautySalonModel.OrderService" Role="OrderService" Multiplicity="*" />
+    <End Role="Order" Type="Self.Order" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Order">
         <PropertyRef Name="ID" />
@@ -99,10 +69,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderService_Services">
-    <End Type="BeautySalonModel.Service" Role="Service" Multiplicity="1" />
-    <End Type="BeautySalonModel.OrderService" Role="OrderService" Multiplicity="*" />
+    <End Role="Services" Type="Self.Service" Multiplicity="1" />
+    <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Service">
+      <Principal Role="Services">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="OrderService">
@@ -110,4 +80,22 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="OrderServices" EntityType="Self.OrderService" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <AssociationSet Name="FK_Order_Client" Association="Self.FK_Order_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderService_Order" Association="Self.FK_OrderService_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderService" EntitySet="OrderServices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderService_Services" Association="Self.FK_OrderService_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="OrderService" EntitySet="OrderServices" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

@@ -13,10 +13,10 @@ namespace Beauty_Salon.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BeautySalonEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public BeautySalonEntities()
-            : base("name=BeautySalonEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -29,6 +29,5 @@ namespace Beauty_Salon.Entities
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderService> OrderServices { get; set; }
         public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

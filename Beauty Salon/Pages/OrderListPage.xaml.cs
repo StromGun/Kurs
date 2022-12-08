@@ -48,6 +48,14 @@ namespace Beauty_Salon.Pages
 
         private void ImgDelete_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            var currentOrder = (sender as Image).DataContext as Entities.Order;
+
+            if (MessageBox.Show($"Вы уверены, что хотите удалить клиента: " + $"{currentOrder.OrderName}?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                App.Context.Orders.Remove(currentOrder);
+                App.Context.SaveChanges();
+            }
             UpdateOrders();
         }
 
