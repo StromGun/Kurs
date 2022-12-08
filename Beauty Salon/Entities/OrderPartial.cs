@@ -12,5 +12,13 @@ namespace Beauty_Salon.Entities
         //{
         //    get => Services.Price;
         //}
+
+        public string GetServices
+        {
+            get
+            {
+                return string.Join(",", OrderServices);
+            }
+        }
     }
 }

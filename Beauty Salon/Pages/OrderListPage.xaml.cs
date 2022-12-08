@@ -37,10 +37,12 @@ namespace Beauty_Salon.Pages
             var orderService = App.Context.OrderServices.ToList();
 
             DGorders.ItemsSource = orders;
+            DGorders.DataContext = orderService;
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new AddEditOrderPage());
             UpdateOrders();
         }
 

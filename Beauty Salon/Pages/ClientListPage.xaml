@@ -31,7 +31,7 @@
                 <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*"/>
                 <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" Width="*"/>
 
-                
+
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

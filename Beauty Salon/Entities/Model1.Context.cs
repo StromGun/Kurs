@@ -13,10 +13,10 @@ namespace Beauty_Salon.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class BeautySalonEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public BeautySalonEntities()
+            : base("name=BeautySalonEntities")
         {
         }
     
@@ -25,10 +25,10 @@ namespace Beauty_Salon.Entities
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderService> OrderServices { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
