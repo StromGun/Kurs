@@ -62,3 +62,47 @@ C:\Users\Admin\source\repos\Kurs\Beauty Salon\bin\Debug\ru\EntityFramework.resou
 C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon_Content.g.cs
 C:\Users\Admin\source\repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.CopyComplete
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\Beauty Salon.exe.config
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\Beauty Salon.exe
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\Beauty Salon.pdb
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.dll
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.xml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.AssemblyReference.cache
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.SuggestedBindingRedirects.cache
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\MainWindow.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditClient.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ClientListPage.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\App.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon_Content.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon_MarkupCompile.cache
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon_MarkupCompile.lref
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\App.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\MainWindow.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditClient.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ClientListPage.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.g.resources
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty_Salon.Properties.Resources.resources
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.GenerateResource.cache
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.CoreCompileInputs.cache
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.csproj.CopyComplete
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.exe
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Beauty Salon.pdb
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.baml
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.g.cs
+C:\Users\StormGun\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.baml
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.g.cs
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.g.cs
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.g.cs
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.g.cs
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditOrderPage.baml
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\AddEditServicePage.baml
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\OrderListPage.baml
+C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\obj\Debug\Pages\ServiceListPage.baml

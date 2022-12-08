@@ -13,10 +13,10 @@ namespace Beauty_Salon.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class BeautySalonEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public BeautySalonEntities()
+            : base("name=BeautySalonEntities")
         {
         }
     

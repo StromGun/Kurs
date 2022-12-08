@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Admin\Source\Repos\Kurs\Beauty Salon\App.xaml
-3-902402614
+7-1475402380
 2-1436223632
-15-795397071
+211362919828
 18-2009969084
-MainWindow.xaml;Pages\AddEditClient.xaml;Pages\ClientListPage.xaml;
+MainWindow.xaml;Pages\AddEditClient.xaml;Pages\AddEditOrderPage.xaml;Pages\AddEditServicePage.xaml;Pages\ClientListPage.xaml;Pages\OrderListPage.xaml;Pages\ServiceListPage.xaml;
 
 False
 

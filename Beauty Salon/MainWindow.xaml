@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Beauty_Salon"
         mc:Ignorable="d"
-        Title="Beauty Salon" MinHeight="450" MinWidth="800" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontWeight="Bold" Icon="Resources/logo.png">
+        Title="Beauty Salon" MinHeight="600" MinWidth="800" FontFamily="/Beauty Salon;component/Resources/Fonts/#Caveat" FontWeight="Bold" Icon="Resources/logo.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.3*" MaxHeight="90"/>
+            <RowDefinition Height="0.2*" MaxHeight="40"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="0.2*" MaxHeight="50"/>
         </Grid.RowDefinitions>
         
         
-        <Grid Background="{StaticResource ColorCommon}">
-            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0"/>
-            
-            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Width="200"/>
+        <Grid Background="{StaticResource ColorCommon}" Margin="0">
+            <Image Source="Resources/logo.png" HorizontalAlignment="Left" Margin="20 0 0 10"/>
+
+            <TextBlock Text="{Binding ElementName=FrameMain, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Width="auto"/>
             <Button x:Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Resources/undo.png"/>
@@ -26,9 +27,15 @@
             </Button>
         </Grid>
 
-        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="FrameMain" Background="{StaticResource ColorDefault}"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#FFF9D0DF" Margin="0">
+            <Button Content="Услуги" x:Name="BtnServices" Click="BtnServices_Click" Style="{StaticResource miniBtn}"/>
+            <Button Content="Клиенты" x:Name="BtnClients" Click="BtnClients_Click" Style="{StaticResource miniBtn}"/>
+            <Button Content="Заказы" x:Name="BtnOrders" Click="BtnOrders_Click" Style="{StaticResource miniBtn}"/>
+        </StackPanel>
 
-        <Grid Grid.Row="2" Background="{StaticResource ColorCommon}"/>
+        <Frame Grid.Row="2" NavigationUIVisibility="Hidden" Name="FrameMain" Background="{StaticResource ColorDefault}"/>
+
+        <Grid Grid.Row="3" Background="{StaticResource ColorCommon}"/>
 
     </Grid>
 </Window>
