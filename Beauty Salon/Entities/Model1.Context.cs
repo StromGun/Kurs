@@ -26,8 +26,8 @@ namespace Beauty_Salon.Entities
         }
     
         public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderService> OrderServices { get; set; }
         public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
     }
 }

@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Beauty_Salon.Pages
 {
@@ -23,7 +14,6 @@ namespace Beauty_Salon.Pages
         public OrderListPage()
         {
             InitializeComponent();
-            UpdateOrders();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -50,7 +40,7 @@ namespace Beauty_Salon.Pages
         {
             var currentOrder = (sender as Image).DataContext as Entities.Order;
 
-            if (MessageBox.Show($"Вы уверены, что хотите удалить клиента: " + $"{currentOrder.OrderName}?", "Внимание",
+            if (MessageBox.Show($"Вы уверены, что хотите удалить заказ: " + $"{currentOrder.OrderName}?", "Внимание",
                 MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 App.Context.Orders.Remove(currentOrder);

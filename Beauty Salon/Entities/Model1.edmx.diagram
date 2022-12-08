@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4c8fdf58b0044e40a558b1531466db44" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OrderService" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <AssociationConnector Association="Model.FK_OrderService_Services" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="3" PointY="1.125" />
+      <Diagram DiagramId="4c8fdf58b0044e40a558b1531466db44" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="Model.OrderService" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="3" PointY="5.25" />
         <AssociationConnector Association="Model.FK_Order_Client" />
         <AssociationConnector Association="Model.FK_OrderService_Order" />
+        <AssociationConnector Association="Model.FK_OrderService_Services" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

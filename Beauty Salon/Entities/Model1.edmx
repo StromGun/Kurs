@@ -27,7 +27,8 @@
         </EntityType>
         <EntityType Name="OrderService">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ServiceID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderID" Type="int" Nullable="false" />
@@ -105,58 +106,11 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Client">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Age" Type="Int16" Nullable="false" />
-          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Orders" Relationship="Model.FK_Order_Client" FromRole="Client" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="OrderService">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OrderID" Type="Int32" Nullable="false" />
-          <Property Name="ServiceID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Service" Relationship="Self.FK_OrderService_Services" FromRole="OrderService" ToRole="Services" />
-          <NavigationProperty Name="Order" Relationship="Model.FK_OrderService_Order" FromRole="OrderService" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="Service">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="OrderServices" Relationship="Self.FK_OrderService_Services" FromRole="Services" ToRole="OrderService" />
-        </EntityType>
-        <Association Name="FK_OrderService_Services">
-          <End Role="Services" Type="Self.Service" Multiplicity="1" />
-          <End Role="OrderService" Type="Self.OrderService" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Services">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="OrderService">
-              <PropertyRef Name="ServiceID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Clients" EntityType="Self.Client" />
-          <EntitySet Name="OrderServices" EntityType="Self.OrderService" />
-          <EntitySet Name="Services" EntityType="Self.Service" />
-          <AssociationSet Name="FK_OrderService_Services" Association="Self.FK_OrderService_Services">
-            <End Role="Services" EntitySet="Services" />
-            <End Role="OrderService" EntitySet="OrderServices" />
-          </AssociationSet>
+          <EntitySet Name="Clients" EntityType="Model.Client" />
           <EntitySet Name="Orders" EntityType="Model.Order" />
+          <EntitySet Name="OrderServices" EntityType="Model.OrderService" />
+          <EntitySet Name="Services" EntityType="Model.Service" />
           <AssociationSet Name="FK_Order_Client" Association="Model.FK_Order_Client">
             <End Role="Client" EntitySet="Clients" />
             <End Role="Order" EntitySet="Orders" />
@@ -165,7 +119,23 @@
             <End Role="Order" EntitySet="Orders" />
             <End Role="OrderService" EntitySet="OrderServices" />
           </AssociationSet>
+          <AssociationSet Name="FK_OrderService_Services" Association="Model.FK_OrderService_Services">
+            <End Role="Service" EntitySet="Services" />
+            <End Role="OrderService" EntitySet="OrderServices" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int16" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Orders" Relationship="Model.FK_Order_Client" FromRole="Client" ToRole="Order" />
+        </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="ID" />
@@ -177,8 +147,30 @@
           <NavigationProperty Name="Client" Relationship="Model.FK_Order_Client" FromRole="Order" ToRole="Client" />
           <NavigationProperty Name="OrderServices" Relationship="Model.FK_OrderService_Order" FromRole="Order" ToRole="OrderService" />
         </EntityType>
+        <EntityType Name="OrderService">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Model.FK_OrderService_Order" FromRole="OrderService" ToRole="Order" />
+          <NavigationProperty Name="Service" Relationship="Model.FK_OrderService_Services" FromRole="OrderService" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="OrderServices" Relationship="Model.FK_OrderService_Services" FromRole="Service" ToRole="OrderService" />
+        </EntityType>
         <Association Name="FK_Order_Client">
-          <End Type="Model.Client" Role="Client" Multiplicity="1" />
+          <End Type="Model.Client" Role="Client" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="Model.Order" Role="Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Client">
@@ -190,7 +182,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_OrderService_Order">
-          <End Type="Model.Order" Role="Order" Multiplicity="1" />
+          <End Type="Model.Order" Role="Order" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="Model.OrderService" Role="OrderService" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
@@ -201,7 +195,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FK_OrderService_Services">
+          <End Type="Model.Service" Role="Service" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model.OrderService" Role="OrderService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderService">
+              <PropertyRef Name="ServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -210,30 +218,12 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="Model.Client">
               <MappingFragment StoreEntitySet="Client">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrderServices">
-            <EntityTypeMapping TypeName="Model.OrderService">
-              <MappingFragment StoreEntitySet="OrderService">
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Services">
-            <EntityTypeMapping TypeName="Model.Service">
-              <MappingFragment StoreEntitySet="Services">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -243,6 +233,24 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="ClientID" ColumnName="ClientID" />
                 <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderServices">
+            <EntityTypeMapping TypeName="Model.OrderService">
+              <MappingFragment StoreEntitySet="OrderService">
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="Model.Service">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

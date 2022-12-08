@@ -4,30 +4,12 @@
     <EntitySetMapping Name="Clients">
       <EntityTypeMapping TypeName="Model.Client">
         <MappingFragment StoreEntitySet="Client">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
-          <ScalarProperty Name="Age" ColumnName="Age" />
           <ScalarProperty Name="Image" ColumnName="Image" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="OrderServices">
-      <EntityTypeMapping TypeName="Model.OrderService">
-        <MappingFragment StoreEntitySet="OrderService">
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Services">
-      <EntityTypeMapping TypeName="Model.Service">
-        <MappingFragment StoreEntitySet="Services">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -37,6 +19,24 @@
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="ClientID" ColumnName="ClientID" />
           <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderServices">
+      <EntityTypeMapping TypeName="Model.OrderService">
+        <MappingFragment StoreEntitySet="OrderService">
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="Model.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
