@@ -22,12 +22,14 @@ namespace Beauty_Salon.Pages
     {
         Entities.Client _currentClient = null;
         Entities.Order _currentOrder = null;
+        Entities.OrderService _currentOrderService = null;
 
         public AddEditOrderPage()
         {
             InitializeComponent();
             DataContext = new Entities.Order();
             DataContext = new Entities.Client();
+            DataContext = new Entities.OrderService();
             LboxService.ItemsSource = App.Context.Services.ToList();
         }
 
@@ -50,7 +52,19 @@ namespace Beauty_Salon.Pages
                         Patronymic = TboxPatronymic.Text,
                         Age = short.Parse(TboxAge.Text)
                     };
+
+                    var order = new Entities.Order
+                    {
+                        OrderName = DateTime.Now.ToString()
+                    };
+
+                    var orderService = new Entities.OrderService
+                    {                       
+                        ServiceID = int.Parse(LboxService.SelectedValue.ToString())
+                    };
                     App.Context.Clients.Add(client);
+                    App.Context.Orders.Add(order);
+                    App.Context.OrderServices.Add(orderService);
                     App.Context.SaveChanges();
                 }
                 else
@@ -61,10 +75,8 @@ namespace Beauty_Salon.Pages
                     _currentClient.Age = short.Parse(TboxAge.Text);
 
                     _currentOrder.OrderName = DateTime.Now.ToString() + _currentClient.ID.ToString();
-                    //foreach (var item in LboxService.SelectedItems)
-                    //{
-                    //    _currentOrder.OrderServices = item.ToString();
-                    //}
+                    _currentOrderService.OrderID = _currentOrder.ID;
+                    _currentOrderService.ServiceID = int.Parse(LboxService.SelectedValue.ToString());
                     App.Context.SaveChanges();
                 }
                 NavigationService.GoBack();

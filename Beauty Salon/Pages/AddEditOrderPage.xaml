@@ -30,7 +30,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Услуги" Style="{StaticResource TBmain}"/>
-                    <ListBox Name="LboxService" DisplayMemberPath="Name" Width="150" Height="70" Margin="5"
+                    <ListBox Name="LboxService" DisplayMemberPath="Name" Width="150" Height="70" Margin="5" SelectedValue="{Binding ID}" SelectedValuePath="ID"
                              SelectionMode="Multiple"/>
 
                 </StackPanel>
