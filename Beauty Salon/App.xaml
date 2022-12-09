@@ -52,12 +52,12 @@
         </Style>
 
 
-        <Style TargetType="DataGrid">
+        <!--<Style TargetType="DataGrid">
             <Setter Property="IsReadOnly" Value="True"/>
             <Setter Property="AutoGenerateColumns" Value="False"/>
             <Setter Property="GridLinesVisibility" Value="Horizontal"/>
             <Setter Property="MinRowHeight" Value="70"/>
-        </Style>
+        </Style>-->
 
 
         <Brush x:Key="ColorCommon">#FFC8DD</Brush>

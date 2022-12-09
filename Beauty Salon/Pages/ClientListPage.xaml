@@ -15,7 +15,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="1" x:Name="DGclient">
+        <DataGrid Grid.Row="1" x:Name="DGclient"  >
             <DataGrid.Columns>
                 
                 <DataGridTemplateColumn Header="Фото" Width="100">
